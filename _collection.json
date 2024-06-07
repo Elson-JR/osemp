@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "0fa7597c-9da0-4db8-9225-bf14ab82ce3c",
+		"name": "osemp",
+		"description": "Gerenciador de Ordens de Serviço",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19247534"
+	},
+	"item": [
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "GET Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clients"
+							]
+						},
+						"description": "Rota para consultar todos os Clientes"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clients",
+								"1"
+							]
+						},
+						"description": "Rota para consultar um cliente filtrado pelo ID"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"name\": \"Nome do Cliente\",\r\n    \"road\": \"Rua\",\r\n    \"number\": \"45\",\r\n    \"neighborhood\": \"Bairro\",\r\n    \"cep\": \"123456788\",\r\n    \"phone\": \"123456789\",\r\n    \"email\": \"email@outlook.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clients",
+								"1"
+							]
+						},
+						"description": "Rota para atualizar um cliente filtrado pelo ID"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Client",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/clients/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clients",
+								"2"
+							]
+						},
+						"description": "Rota para deletar um Cliente filtrado por ID"
+					},
+					"response": []
+				},
+				{
+					"name": "POST Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"name\": \"Nome do Cliente\",\r\n    \"road\": \"Rua\",\r\n    \"number\": \"24\",\r\n    \"neighborhood\": \"Bairro\",\r\n    \"cep\": \"123456788\",\r\n    \"phone\": \"123456789\",\r\n    \"email\": \"email@outlook.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clients"
+							]
+						},
+						"description": "Rota para cadastrar um novo Cliente"
+					},
+					"response": []
+				}
+			],
+			"description": "Rotas de informação de Clientes"
+		},
+		{
+			"name": "WorkOrders",
+			"item": [
+				{
+					"name": "GET WorkOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/os",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"os"
+							]
+						},
+						"description": "Rota para consultar todas as Ordens de Serviço"
+					},
+					"response": []
+				},
+				{
+					"name": "POST WorkOrders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"cliid\": 1,\r\n    \"description\": \"Descrição da Ordem de Serviço\",\r\n    \"status\": \"Em Andamento\",\r\n    \"date\": \"Wed Jun 18 2024 00:00:00 GMT-0300 (Horário Padrão de Brasília)\",\r\n    \"cost\": \"1600\",\r\n    \"observations\": \"Nenhum\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/os",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"os"
+							]
+						},
+						"description": "Rota para cadastrar uma nova Ordem de Serviço"
+					},
+					"response": []
+				},
+				{
+					"name": "GET WorKOrder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/os/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"os",
+								"1"
+							]
+						},
+						"description": "Rota para consultar uma Ordem de Serviço filtrado por ID"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT WorKOrder",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"cliid\": 1,\r\n    \"description\": \"Descrição da Ordem de Serviço\",\r\n    \"status\": \"Concluída\",\r\n    \"date\": \"2024-06-12T00:00:00.000Z\",\r\n    \"cost\": \"2500\",\r\n    \"observations\": \"Nenhum\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/os/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"os",
+								"2"
+							]
+						},
+						"description": "Rota para atualizar uma Ordem de Serviço filtrado pelo ID"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE WorKOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/os/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"os",
+								"2"
+							]
+						},
+						"description": "Rota para deletar uma Ordem de Serviço filtrado pelo ID"
+					},
+					"response": []
+				}
+			],
+			"description": "Rotas de informação de Ordens de Serviço"
+		}
+	]
+}
