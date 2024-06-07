@@ -76,9 +76,9 @@ Abra o http://localhost:3000 com seu navegador para ver o resultado.
 
 Para clonar este repositório em seu computador, siga estas etapas:
 
-- 1. Abra o terminal (ou prompt de comando) no seu computador.
-- 2. Navegue até o diretório onde você deseja clonar o repositório usando o comando `cd` (por exemplo, `cd /caminho/do/diretorio`).
-- 3. Execute o seguinte comando para clonar o repositório:
+- . Abra o terminal (ou prompt de comando) no seu computador.
+- . Navegue até o diretório onde você deseja clonar o repositório usando o comando `cd` (por exemplo, `cd /caminho/do/diretorio`).
+- . Execute o seguinte comando para clonar o repositório:
 
         git clone https://github.com/Elson-JR/osemp.git
 
