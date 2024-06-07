@@ -1,3 +1,16 @@
+/**
+ * Nome do arquivo: layout.tsx
+ * Data de criação: 07/06/2024
+ * Autor: Elson Pereira
+ * Matrícula: 01613599
+ *
+ * Descrição:
+ * Este arquivo é responsável por gerenciar a configuração inicial e o layout básico de uma aplicação web utilizando Next.js.
+ * Ele inclui a definição de metadados como título e descrição, a importação da fonte Inter do Google Fonts,
+ * a inclusão de estilos globais através do arquivo "globals.css", e a definição da estrutura HTML e classes CSS
+ * para o layout da página principal.
+ * Este script é parte o curso de ADS.
+ */
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
