@@ -72,6 +72,18 @@ Abra o http://localhost:3000 com seu navegador para ver o resultado.
               CONSTRAINT FK_WorkOrder_Client FOREIGN KEY (cliid) REFERENCES Client(id)
           );
 
+## Como Clonar o Repositório Usando Git
+
+Para clonar este repositório em seu computador, siga estas etapas:
+
+1. Abra o terminal (ou prompt de comando) no seu computador.
+2. Navegue até o diretório onde você deseja clonar o repositório usando o comando `cd` (por exemplo, `cd /caminho/do/diretorio`).
+3. Execute o seguinte comando para clonar o repositório:
+
+```sh
+git clone https://github.com/Elson-JR/osemp.git
+
+
 # Autor
 
 Elson Perira da Silva Junior
