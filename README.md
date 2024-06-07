@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OSemp
 
-## Getting Started
+# Sobre o projeto
 
-First, run the development server:
+A aplicação consiste em realizar cadastros de clientes e de Ordens de Serviço (OS).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Na aba de Clientes, é possível cadastrar informações detalhadas como rua, bairro, email, número e CEP. Após o cadastro, o sistema permite editar ou deletar essas informações conforme necessário.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Na aba de Cadastro de OS, é possível fornecer uma descrição do serviço, selecionar o cliente para o qual o serviço será realizado, informar o custo do serviço, definir o estado do serviço (em aberto, em andamento ou concluído) e adicionar observações. Esse fluxo permite uma gestão completa das ordens de serviço.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Layout 
+- Home 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![HOME](https://github.com/Elson-JR/osemp/assets/112088705/1a89e503-0196-424a-a269-5a786cdad883)
 
-## Learn More
+- Aba Cadastro de Ordem de Serviço(OS)
 
-To learn more about Next.js, take a look at the following resources:
+![OS](https://github.com/Elson-JR/osemp/assets/112088705/bae2ac31-9cc3-4de1-a392-e4d6e9cea0b4)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Aba Cadastro de Clientes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![CLIENT](https://github.com/Elson-JR/osemp/assets/112088705/55e5ee52-f3a9-47b1-bc94-8764c544f72a)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Tecnologias utilizadas
+## Back end
+- "Next API"
+- "Tedious"
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Front end
+- "Shadcn.iu"
+- "Tailwind"
+
+## Implantação em produção
+
+- Banco de dados: SQL SERVER
+
+# Como executar o API do projeto 
+
+Terminal:  
+
+    npm run dev 
+    #ou 
+    yarn dev 
+    
+# No Navegador da sua Maquina
+Abra o http://localhost:3000 com seu navegador para ver o resultado.  
+
+### Pré-requisitos: NODE v20.13.1
+
+## Instrução de Criação de Tabelas no SQL Server 
+      CREATE TABLE Client (
+              id INT IDENTITY(1,1) PRIMARY KEY,
+              name NVARCHAR(255) NOT NULL,
+              road NVARCHAR(255) NOT NULL,
+              number NVARCHAR(50) NOT NULL,
+              neighborhood NVARCHAR(255) NOT NULL,
+              cep NVARCHAR(20) NOT NULL,
+              phone NVARCHAR(20) NOT NULL,
+              email NVARCHAR(255) NOT NULL
+          );
+      GO
+      
+      CREATE TABLE WorkOrder (
+              id INT IDENTITY(1,1) PRIMARY KEY,
+              cliid INT,
+              description VARCHAR(255),
+              status VARCHAR(50),
+              date DATETIME,
+              cost DECIMAL(10, 2),
+              observations TEXT,
+              CONSTRAINT FK_WorkOrder_Client FOREIGN KEY (cliid) REFERENCES Client(id)
+          );
+
+# Autor
+
+Elson Perira da Silva Junior
+
+Matricula:01613599
+
